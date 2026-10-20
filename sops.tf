@@ -37,8 +37,8 @@ locals {
   # Statyczne mapowanie - klucze znane podczas planowania
   sops_to_keyvault_mapping = {
     # Odkomentuj gdy masz zaszyfrowany plik secrets.yaml:
-#    "devops-sp-username" = try(data.sops_file.secrets.data["devops_sp_username"], "")
-#    "devops-sp-password" = try(data.sops_file.secrets.data["devops_sp_password"], "")
+    # "devops-sp-username" = try(data.sops_file.secrets.data["devops_sp_username"], "")
+    # "devops-sp-password" = try(data.sops_file.secrets.data["devops_sp_password"], "")
   }
 }
 
