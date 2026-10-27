@@ -54,8 +54,8 @@ resource "azurerm_storage_management_policy" "backend" {
       # (14 + 180 -- minimalny okres przechowywania w Archive, bez opłaty za wcześniejsze usunięcie)
       version {
         tier_to_cold_after_days_since_creation_greater_than = 0
-#        change_tier_to_archive_after_days_since_creation    = 14
-        delete_after_days_since_creation                    = 194
+        #        change_tier_to_archive_after_days_since_creation    = 14
+        delete_after_days_since_creation = 194
       }
     }
   }

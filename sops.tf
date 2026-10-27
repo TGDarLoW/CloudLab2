@@ -21,15 +21,15 @@ resource "azurerm_key_vault_key" "sops_encryption_key" {
 # Data source do odczytu zaszyfrowanych sekretów z SOPS
 # Uwaga: Plik secrets.yaml musi istnieć, nawet jeśli jest pusty
 # sops.tf - data source do odczytu zaszyfrowanych sekretów
-#data "sops_file" "secrets" {
-#  source_file = "secrets.yaml"
-#
-#  depends_on = [
-#    azurerm_key_vault_key.sops_encryption_key,
-#    azurerm_role_assignment.sops_crypto_user,
-#    azurerm_role_assignment.key_vault_secrets_officer
-#  ]
-#}
+# data "sops_file" "secrets" {
+#   source_file = "secrets.yaml"
+
+#   depends_on = [
+#     azurerm_key_vault_key.sops_encryption_key,
+#     azurerm_role_assignment.sops_crypto_user,
+#     azurerm_role_assignment.key_vault_secrets_officer
+#   ]
+# }
 
 # Mapowanie nazw sekretów z SOPS na nazwy w Key Vault
 # sops.tf - mapowanie nazw sekretów z SOPS na nazwy w Key Vault
